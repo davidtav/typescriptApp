@@ -1,0 +1,24 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": " cross-env NODE_ENV=development webpack --progress --watch",
+    "prod": " cross-env NODE_ENV=production webpack --progress --watch",
+    "server": " live-server --port=5000 --host=localhost --browser=brave public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "live-server": "^1.2.2"
+  }
+}
