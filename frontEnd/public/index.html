@@ -6,8 +6,23 @@
     <title>Curso de Back e Front com Typescript</title>
 </head>
 <body>
-  <h2>Curso de back e front com Typescript</h2>
-  <p>teste</p>
-  <script src="./dist/index.js"></script>  
+  <div id="container">
+    <h2 id="title">Curso de back e front com Typescript</h2>
+    <button id="create">create</button>
+  </div>
+  <!-- <script src="./dist/index.js"></script>   -->
+  <script>
+    const buttonCreate = document.querySelector('#create');
+    buttonCreate.addEventListener('click', async () => {
+    try {
+      const response = await fetch("http://localhost:3000/user/create",{
+      method: 'POST'    
+      });
+      console.log(await response.json());
+    } catch (error) {
+      console.log(error)
+    }
+    });
+  </script>
 </body>
 </html>
